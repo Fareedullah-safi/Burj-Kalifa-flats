@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 // import { ArrowRight } from 'lucide-react';
 
@@ -34,7 +34,12 @@ export const sampleFlats = [
     }
 ];
 
+
 const Flats = () => {
+    const [loading, setLoading] = useState(false)
+    const handleClick = () => {
+        setLoading(true)
+    }
     return (
         <main className="bg-gradient-to-br from-gray-900 via-gray-950 to-black text-gray-200 min-h-screen">
             <div className="p-6 pb-0 max-w-7xl mx-auto">
@@ -89,9 +94,10 @@ const Flats = () => {
                 <div className="flex justify-center mt-12">
                     <Link
                         href="/flats"
+                        onClick={handleClick}
                         className="cursor-pointer inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-500 text-white rounded-full text-lg font-medium hover:scale-105 transition"
                     >
-                        Explore More
+                        {loading ? 'Loading...' : 'Explore More'}
                     </Link>
                 </div>
             </div>

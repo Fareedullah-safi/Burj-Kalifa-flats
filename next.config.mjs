@@ -1,17 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     experimental: {
-        turbopack: false, // disable turbopack
+        serverActions: {}, // ✅ Use an object, not `true`
+        // Remove or correctly configure 'turbopack' if needed
     },
-    images: {
-        remotePatterns: [
-            {
-                protocol: 'https',
-                hostname: 'images.unsplash.com',
-            },
-        ],
-    },
-    base: process.env.base_env || "/Burj-Kalifa"
-};
+}
 
-export default nextConfig;
+export default nextConfig
