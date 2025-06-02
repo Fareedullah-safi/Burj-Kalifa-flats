@@ -88,7 +88,7 @@ const Flats = () => {
                 {/* CTA Button */}
                 <div className="flex justify-center mt-12">
                     <Link
-                        href="/Flats"
+                        href="/flats"
                         className="cursor-pointer inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-500 text-white rounded-full text-lg font-medium hover:scale-105 transition"
                     >
                         Explore More

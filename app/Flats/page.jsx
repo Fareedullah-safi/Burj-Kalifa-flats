@@ -28,7 +28,7 @@ const Page = () => {
                     price: flat.price.toString(),
                 });
                 setTimeout(() => {
-                    router.push(`/Booking?${params.toString()}`);
+                    router.push(`/booking?${params.toString()}`);
                 }, 1500);
             } else {
                 toast.error('Sorry, this floor is already booked.');

@@ -79,7 +79,7 @@ export default function BookPage() {
             if (res.data.success) {
                 toast.success("Booking successful!");
                 setForm({ username: '', email: '', phonenumber: '' });
-                router.push('/Flats');
+                router.push('/flats');
             } else {
                 toast.error(res.data.message || "Something went wrong");
             }
