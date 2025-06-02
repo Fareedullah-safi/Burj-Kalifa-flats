@@ -65,7 +65,7 @@ const page = () => {
                     Explore our luxury flats and live in the world’s most iconic tower.
                 </p>
                 <Link
-                    href="/Flats"
+                    href="/flats"
                     className="inline-block px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-lg font-semibold rounded-full hover:scale-105 transition-all duration-300 shadow-lg"
                 >
                     🏙️ View Available Flats
