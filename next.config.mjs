@@ -11,6 +11,7 @@ const nextConfig = {
             },
         ],
     },
+    base: process.env.base_env || "/Burj-Kalifa"
 };
 
 export default nextConfig;
