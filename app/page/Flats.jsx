@@ -2,7 +2,6 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
 import Image from 'next/image';
-// import { ArrowRight } from 'lucide-react';
 
 export const sampleFlats = [
     {

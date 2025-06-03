@@ -15,7 +15,7 @@ const Page = () => {
     const handleClick = async (flat, index) => {
         setLoadingIndex(index); // start loading this flat
         try {
-            const res = await axios.post('/api/middleware', { floor: flat.floor });
+            const res = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/middleware`, { floor: flat.floor });
             if (res.data.success) {
                 toast.success('Flat available! Redirecting to booking...');
                 const params = new URLSearchParams({

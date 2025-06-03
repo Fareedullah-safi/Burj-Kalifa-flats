@@ -74,7 +74,7 @@ export default function ClientComponent() {
         setLoading(true);  // start loading
 
         try {
-            const res = await axios.post("/api/booking", { ...form, flat });
+            const res = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/booking`, { ...form, flat });
 
             if (res.data.success) {
                 toast.success("Booking successful!");

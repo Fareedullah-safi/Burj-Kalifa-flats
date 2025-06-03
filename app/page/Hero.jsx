@@ -1,6 +1,11 @@
-import React from 'react';
-
+"use client"
+import React, { useState } from 'react';
+import Link from 'next/link';
 const Hero = () => {
+    const [loading, setLoading] = useState(false)
+    const handleClick = () => {
+        setLoading(true)
+    }
     return (
         <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white min-h-[80vh] flex items-center">
             {/* Overlay gradient for subtle depth */}
@@ -15,18 +20,20 @@ const Hero = () => {
                     <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed drop-shadow-md">
                         Discover ultra-luxury flats at the iconic Burj Khalifa. Experience unmatched views, world-class amenities, and a lifestyle like no other in the tallest building on earth.
                     </p>
-                    <button
+                    <Link
+                        onClick={handleClick}
+                        href="/flats"
                         className="
-                            bg-gradient-to-r from-cyan-500 to-blue-600
-                            text-white font-semibold py-3 px-8 rounded-full shadow-lg
-                            hover:from-cyan-600 hover:to-blue-700
-                            transition duration-300 ease-in-out
-                            focus:outline-none focus:ring-4 focus:ring-cyan-400/50
-                            drop-shadow-xl
+                                                    bg-gradient-to-r from-cyan-500 to-blue-600
+                        text-white font-semibold py-3 px-8 rounded-full shadow-lg
+                        hover:from-cyan-600 hover:to-blue-700
+                        transition duration-300 ease-in-out
+                        focus:outline-none focus:ring-4 focus:ring-cyan-400/50
+                        drop-shadow-xl
                         "
                     >
-                        Explore Flats
-                    </button>
+                        {loading ? 'Loading...' : 'Explore Flats'}
+                    </Link>
                 </div>
 
                 {/* Image Section */}

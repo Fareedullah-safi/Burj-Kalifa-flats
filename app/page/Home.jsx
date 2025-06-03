@@ -1,9 +1,8 @@
 import React from 'react';
-import Image from 'next/image';
 
 const Home = () => {
     return (
-        <section className="px-8 py-12 bg-zinc-900">
+        <section className="px-8 py-12 bg-gray-900">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                 {/* Text Section */}
                 <div>
@@ -16,12 +15,23 @@ const Home = () => {
                 </div>
 
                 {/* Image Section */}
-                <div className="flex justify-evenly">
+                {/* Image Section */}
+                <div className="flex justify-center md:justify-end z-10">
                     <img
                         src="/images/new.jpg"
                         alt="Burj Khalifa"
-                        width={600} // reduced width // reduced height
-                        className="rounded-2xl object-cover shadow-lg h-[600]"
+                        width={600}
+                        height={750}
+                        className="
+                            rounded-3xl
+                            object-cover
+                            shadow-2xl
+                            ring-4 ring-cyan-600/40
+                            transition-transform duration-500 ease-in-out
+                            hover:scale-105
+                            max-w-full
+                            h-auto
+                        "
                     />
                 </div>
             </div>
