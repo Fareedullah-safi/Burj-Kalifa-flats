@@ -11,8 +11,6 @@ export async function POST(req) {
         const body = await req.json();
         const { username, email, phonenumber, flat } = body;
 
-
-
         // Create and save a new user document
         const newUser = new Booker({
             username,

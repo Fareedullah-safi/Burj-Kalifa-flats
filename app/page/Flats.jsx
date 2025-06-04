@@ -32,6 +32,17 @@ export const sampleFlats = [
         "price": 5400000
     }
 ];
+export const oneFlat = [
+    {
+        "image": "/images/4.jpg",
+        "title": "Luxury Sky Villa",
+        "description": "Stunning 1-bedroom flat with Burj & Fountain view.",
+        "floor": 4,
+        "bedrooms": 1,
+        "size": 1200,
+        "price": 2800000
+    }
+]
 
 
 const Flats = () => {
@@ -81,13 +92,45 @@ const Flats = () => {
 
                                 <div className="flex items-center justify-between mt-4">
                                     <span className="text-lg font-semibold text-emerald-400">
-                                        ${flat.price.toLocaleString()}
+                                        ${flat.price}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                    {oneFlat.map((flat, index) => (
+                        <div
+                            key={index}
+                            className="sm:block md:block lg:hidden xl:hidden backdrop-blur-sm bg-gray-800/50 border border-gray-700 rounded-2xl shadow-xl hover:scale-[1.02] transition-transform duration-300 overflow-hidden relative group"
+                        >
+                            <Image
+                                src={flat.image}
+                                alt={flat.title}
+                                width={500}
+                                height={300}
+                                className="object-cover w-full h-64 transition group-hover:scale-105"
+                            />
+                            <div className="absolute top-4 left-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-xs px-3 py-1 rounded-full text-white shadow-lg">
+                                Floor {flat.floor}
+                            </div>
+
+                            <div className="p-5 space-y-3">
+                                <h3 className="text-xl font-semibold text-white">{flat.title}</h3>
+                                <p className="text-gray-400 text-sm">{flat.description}</p>
+                                <div className="flex flex-wrap justify-between text-xs text-gray-500 mt-3 border-t border-gray-700 pt-2">
+                                    <span>🛏️ {flat.bedrooms} Bed</span>
+                                    <span>📐 {flat.size} sqft</span>
+                                </div>
+                                <div className="flex items-center justify-between mt-4">
+                                    <span className="text-lg font-semibold text-emerald-400">
+                                        ${flat.price}
                                     </span>
                                 </div>
                             </div>
                         </div>
                     ))}
                 </div>
+
 
                 {/* CTA Button */}
                 <div className="flex justify-center mt-12">

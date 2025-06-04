@@ -14,10 +14,10 @@ const Hero = () => {
             <div className="relative max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-2 items-center gap-12">
                 {/* Text Section */}
                 <div className="z-10">
-                    <h1 className="text-4xl md:text-6xl font-extrabold mb-6 drop-shadow-lg">
+                    <h1 className="text-6xl text-zinc-400 md:text-blue-500 md:text-5xl font-extrabold mb-6 drop-shadow-lg">
                         Live Above the World
                     </h1>
-                    <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed drop-shadow-md">
+                    <p className="text-lg md:text-xl text-zinc-300 mb-8 leading-relaxed drop-shadow-md">
                         Discover ultra-luxury flats at the iconic Burj Khalifa. Experience unmatched views, world-class amenities, and a lifestyle like no other in the tallest building on earth.
                     </p>
                     <Link

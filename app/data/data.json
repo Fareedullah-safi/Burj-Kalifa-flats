@@ -1,7 +1,7 @@
 [
   {
     "image": "/images/1.jpg",
-    "title": "Luxury Sky Villa",
+    "title": "The Crystal Horizon",
     "description": "Stunning 2-bedroom flat with Burj & Fountain view.",
     "floor": 1,
     "bedrooms": 2,
@@ -10,7 +10,7 @@
   },
   {
     "image": "/images/2.jpg",
-    "title": "Luxury Sky Villa",
+    "title": "Skyline Majesty",
     "description": "Stunning 4-bedroom flat with Burj & Fountain view.",
     "floor": 2,
     "bedrooms": 4,
@@ -19,7 +19,7 @@
   },
   {
     "image": "/images/3.jpg",
-    "title": "Luxury Sky Villa",
+    "title": "Celestial Edge",
     "description": "Stunning 3-bedroom flat with Burj & Fountain view.",
     "floor": 3,
     "bedrooms": 3,
@@ -28,7 +28,7 @@
   },
   {
     "image": "/images/4.jpg",
-    "title": "Luxury Sky Villa",
+    "title": "Velvet Haven",
     "description": "Stunning 1-bedroom flat with Burj & Fountain view.",
     "floor": 4,
     "bedrooms": 1,
@@ -37,7 +37,7 @@
   },
   {
     "image": "/images/5.avif",
-    "title": "Luxury Sky Villa",
+    "title": "Azure Heights",
     "description": "Stunning 2-bedroom flat with Burj & Fountain view.",
     "floor": 5,
     "bedrooms": 2,
@@ -46,7 +46,7 @@
   },
   {
     "image": "/images/6.avif",
-    "title": "Luxury Sky Villa",
+    "title": "The Opal Residence",
     "description": "Stunning 3-bedroom flat with Burj & Fountain view.",
     "floor": 6,
     "bedrooms": 3,
@@ -55,7 +55,7 @@
   },
   {
     "image": "/images/7.avif",
-    "title": "Luxury Sky Villa",
+    "title": "Golden Ember Penthouse",
     "description": "Stunning 4-bedroom flat with Burj & Fountain view.",
     "floor": 7,
     "bedrooms": 4,
@@ -64,7 +64,7 @@
   },
   {
     "image": "/images/8.avif",
-    "title": "Luxury Sky Villa",
+    "title": "Burj Sapphire Loft",
     "description": "Stunning 2-bedroom flat with Burj & Fountain view.",
     "floor": 8,
     "bedrooms": 2,
@@ -73,7 +73,7 @@
   },
   {
     "image": "/images/9.avif",
-    "title": "Luxury Sky Villa",
+    "title": "Twilight Luxe Retreat",
     "description": "Stunning 1-bedroom flat with Burj & Fountain view.",
     "floor": 9,
     "bedrooms": 1,
@@ -82,7 +82,7 @@
   },
   {
     "image": "/images/10.avif",
-    "title": "Luxury Sky Villa",
+    "title": "The Zenith Palace",
     "description": "Stunning 3-bedroom flat with Burj & Fountain view.",
     "floor": 10,
     "bedrooms": 3,
@@ -91,7 +91,7 @@
   },
   {
     "image": "/images/room.jpg",
-    "title": "Luxury Sky Villa",
+    "title": "Imperial Fountain View",
     "description": "Stunning 5-bedroom flat with Burj & Fountain view.",
     "floor": 11,
     "bedrooms": 5,
@@ -100,7 +100,7 @@
   },
   {
     "image": "/images/12.avif",
-    "title": "Luxury Sky Villa",
+    "title": "Elysian Sky Court",
     "description": "Stunning 2-bedroom flat with Burj & Fountain view.",
     "floor": 12,
     "bedrooms": 2,

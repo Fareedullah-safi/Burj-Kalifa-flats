@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label";
 import axios from "axios";
 import { userSchema } from "@/lib/validations/user";
 import { toast, Toaster } from 'sonner';
+import { Mail, User, Phone } from "lucide-react"; // Icon set
 
 function useFlatFromSearchParams() {
     const searchParams = useSearchParams();
@@ -22,23 +23,27 @@ function useFlatFromSearchParams() {
     };
 }
 
-function TextInput({ id, label, type = "text", value, onChange, error }) {
+function TextInput({ id, label, type = "text", value, onChange, error, icon: Icon }) {
     return (
         <div className="space-y-1">
             <Label htmlFor={id} className="text-white">{label}</Label>
-            <input
-                id={id}
-                name={id}
-                type={type}
-                value={value}
-                onChange={onChange}
-                autoComplete="off"
-                className={`w-full px-4 py-2 bg-zinc-800 text-white border ${error ? 'border-red-500' : 'border-zinc-700'
-                    } rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500`}
-                required
-                disabled={false} // keep enabled
-            />
-            {error && <p className="text-red-500 text-sm">{error}</p>}
+            <div className="relative">
+                <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-zinc-400">
+                    <Icon size={18} />
+                </span>
+                <input
+                    id={id}
+                    name={id}
+                    type={type}
+                    value={value}
+                    onChange={onChange}
+                    autoComplete="off"
+                    className={`w-full pl-10 pr-4 py-2 bg-zinc-800 text-white border ${error ? 'border-red-500' : 'border-zinc-700'
+                        } rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500`}
+                    required
+                />
+            </div>
+            {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
         </div>
     );
 }
@@ -54,7 +59,7 @@ export default function ClientComponent() {
     });
 
     const [errors, setErrors] = useState({});
-    const [loading, setLoading] = useState(false);  // <-- loading state
+    const [loading, setLoading] = useState(false);
 
     const handleChange = (e) => {
         setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -64,20 +69,19 @@ export default function ClientComponent() {
         e.preventDefault();
 
         const result = userSchema.safeParse(form);
-
         if (!result.success) {
             setErrors(result.error.flatten().fieldErrors);
             return;
         }
 
         setErrors({});
-        setLoading(true);  // start loading
+        setLoading(true);
 
         try {
-            const res = await axios.post(`/api/booking`, { ...form, flat });
+            const res = await axios.post(`api/booking`, { ...form, flat });
 
             if (res.data.success) {
-                toast.success("Booking successful!");
+                toast.success("🎉 Booking successful!");
                 setForm({ username: '', email: '', phonenumber: '' });
                 router.push('/flats');
             } else {
@@ -89,17 +93,19 @@ export default function ClientComponent() {
                 : "Unexpected error occurred";
             toast.error(`Booking error: ${message}`);
         } finally {
-            setLoading(false);  // stop loading after try/catch
+            setLoading(false);
         }
     };
 
     return (
-        <div className="flex justify-center items-center min-h-screen pt-12 pb-12 bg-zinc-950 px-4">
+        <div className="flex justify-center items-center min-h-screen px-4 py-12 bg-gradient-to-br from-zinc-950 to-black">
             <Toaster richColors position="top-right" />
 
-            <Card className="max-w-md w-full bg-zinc-900 border border-zinc-800 shadow-2xl rounded-2xl">
+            <Card className="max-w-md w-full bg-zinc-900/80 backdrop-blur-md border border-zinc-800 shadow-2xl rounded-3xl px-4 sm:px-6 py-6">
                 <CardHeader>
-                    <CardTitle className="text-2xl text-cyan-400 text-center">Book a Flat</CardTitle>
+                    <CardTitle className="text-2xl text-cyan-400 text-center font-bold drop-shadow">
+                        Book a Flat
+                    </CardTitle>
                 </CardHeader>
                 <CardContent>
                     <form className="space-y-5" onSubmit={handleSubmit}>
@@ -109,6 +115,7 @@ export default function ClientComponent() {
                             value={form.username}
                             onChange={handleChange}
                             error={errors.username?.[0]}
+                            icon={User}
                         />
                         <TextInput
                             id="email"
@@ -117,6 +124,7 @@ export default function ClientComponent() {
                             value={form.email}
                             onChange={handleChange}
                             error={errors.email?.[0]}
+                            icon={Mail}
                         />
                         <TextInput
                             id="phonenumber"
@@ -124,11 +132,12 @@ export default function ClientComponent() {
                             value={form.phonenumber}
                             onChange={handleChange}
                             error={errors.phonenumber?.[0]}
+                            icon={Phone}
                         />
                         <Button
                             type="submit"
-                            disabled={loading}  // disable while loading
-                            className="cursor-pointer w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-white font-semibold rounded-full"
+                            disabled={loading}
+                            className="cursor-pointer w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-white font-semibold rounded-full shadow-md"
                         >
                             {loading ? 'Booking...' : 'Book Now'}
                         </Button>
