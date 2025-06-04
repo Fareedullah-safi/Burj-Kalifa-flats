@@ -6,7 +6,7 @@ const Home = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 items-center">
                 {/* Text Section */}
                 <div>
-                    <h1 className="text-5xl font-extrabold text-zinc-400 sm:text-6xl md:text-[45px] lg:text-6xl sm:text-blue-500 lg: mb-6">
+                    <h1 className="text-4xl font-extrabold text-zinc-400 sm:text-6xl md:text-[45px] lg:text-6xl sm:text-blue-500 lg: mb-6">
                         Welcome, <br /> to Burj Khalifa
                     </h1>
                     <p className="text-gray-500 text-lg leading-relaxed text-justify">
