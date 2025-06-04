@@ -6,25 +6,25 @@ import Image from 'next/image';
 export const sampleFlats = [
     {
         "image": "/images/1.jpg",
-        "title": "Luxury Sky Villa",
-        "description": "Stunning 3-bedroom flat with Burj & Fountain view.",
+        "title": "The Crystal Horizon",
+        "description": "Stunning 2-bedroom flat with Burj & Fountain view.",
         "floor": 1,
-        "bedrooms": 3,
-        "size": 2100,
-        "price": 5400000
+        "bedrooms": 2,
+        "size": 1800,
+        "price": 4200000
     },
     {
         "image": "/images/2.jpg",
-        "title": "Luxury Sky Villa",
-        "description": "Stunning 3-bedroom flat with Burj & Fountain view.",
+        "title": "Skyline Majesty",
+        "description": "Stunning 4-bedroom flat with Burj & Fountain view.",
         "floor": 2,
-        "bedrooms": 3,
-        "size": 2100,
-        "price": 5400000
+        "bedrooms": 4,
+        "size": 2500,
+        "price": 6900000
     },
     {
         "image": "/images/3.jpg",
-        "title": "Luxury Sky Villa",
+        "title": "Celestial Edge",
         "description": "Stunning 3-bedroom flat with Burj & Fountain view.",
         "floor": 3,
         "bedrooms": 3,
@@ -35,7 +35,7 @@ export const sampleFlats = [
 export const oneFlat = [
     {
         "image": "/images/4.jpg",
-        "title": "Luxury Sky Villa",
+        "title": "Velvet Haven",
         "description": "Stunning 1-bedroom flat with Burj & Fountain view.",
         "floor": 4,
         "bedrooms": 1,
